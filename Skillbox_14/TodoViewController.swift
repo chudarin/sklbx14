@@ -25,11 +25,6 @@ class TodoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        Persistance.shared.doPresets(taskName: "Вынести мусор")
-//        Persistance.shared.doPresets(taskName: "Погладить кота")
-//        Persistance.shared.doPresets(taskName: "Позвонить в спортлото")
-//        Persistance.shared.doPresets(taskName: "Доделать домашку")
-//        tableView.reloadData()
     }
 }
 

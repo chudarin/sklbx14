@@ -77,6 +77,6 @@ class Persistance {
     }
     
     func getWeatherArray() -> [ForecastWeatherClass] {
-        return realm.objects(TaskArray.self)[0].taskArray
+        return realm.objects(TaskArray.self).first?.taskArray ?? []
     }
 }

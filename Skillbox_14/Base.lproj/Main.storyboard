@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pEb-q6-0FC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pEb-q6-0FC">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -384,7 +384,7 @@
         <!--Прогноз-->
         <scene sceneID="AnO-49-ouH">
             <objects>
-                <viewController id="p97-rL-k0J" customClass="ForecastViewController" customModule="SkillBox_12" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="p97-rL-k0J" customClass="ForecastViewController" customModule="Skillbox_14" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ugy-BR-UBM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -394,7 +394,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="110" id="uXB-cW-EqP" customClass="WeatherTableViewCell" customModule="SkillBox_12" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="110" id="uXB-cW-EqP" customClass="WeatherTableViewCell" customModule="Skillbox_14" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="55.5" width="414" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uXB-cW-EqP" id="jva-0X-vlG">
@@ -508,11 +508,11 @@
             <point key="canvasLocation" x="3114" y="138"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="cloud.fill" catalog="system" width="64" height="42"/>
-        <image name="escape" catalog="system" width="64" height="60"/>
-        <image name="link" catalog="system" width="64" height="58"/>
-        <image name="pencil.circle.fill" catalog="system" width="64" height="60"/>
-    </resources>
     <color key="tintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+    <resources>
+        <image name="cloud.fill" catalog="system" width="128" height="84"/>
+        <image name="escape" catalog="system" width="128" height="121"/>
+        <image name="link" catalog="system" width="128" height="116"/>
+        <image name="pencil.circle.fill" catalog="system" width="128" height="121"/>
+    </resources>
 </document>

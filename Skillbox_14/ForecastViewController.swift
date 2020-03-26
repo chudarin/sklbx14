@@ -22,13 +22,10 @@ class ForecastViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .black
         self.tableView.rowHeight = 100
-        if let data = Persistance.shared.getWeatherArray() {
-            forecastDays = data
-        }
         WeatherLoader().loadWeather(completion: { forecastDays in
             self.forecastDays = forecastDays
             self.tableView.reloadData()
-        })
+            })
     }
 
 }
