@@ -10,10 +10,9 @@
 		B50A102A24292889009B9C05 /* CDTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50A102924292889009B9C05 /* CDTableViewCell.swift */; };
 		B50A102C242928BA009B9C05 /* CDTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50A102B242928BA009B9C05 /* CDTodoViewController.swift */; };
 		B50A102E242928D1009B9C05 /* CDTodoTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50A102D242928D1009B9C05 /* CDTodoTaskViewController.swift */; };
-		B594DFBD242A7492006047B8 /* ForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B594DFBC242A7492006047B8 /* ForecastViewController.swift */; };
-		B594DFBF242A7518006047B8 /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B594DFBE242A7518006047B8 /* WeatherTableViewCell.swift */; };
+		B54D79DD242D25F700F64F37 /* WeatherLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54D79DC242D25F700F64F37 /* WeatherLoader.swift */; };
+		B54D79DF242D263800F64F37 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54D79DE242D263800F64F37 /* WeatherViewController.swift */; };
 		B594DFC1242A7587006047B8 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = B594DFC0242A7587006047B8 /* Category.swift */; };
-		B594DFC9242A771B006047B8 /* WeatherLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B594DFC8242A771B006047B8 /* WeatherLoader.swift */; };
 		B5A1D22B242BD6A000EA6FB9 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5C7BD2C24252BCA00C70AB5 /* Realm.framework */; };
 		B5A1D22C242BD6A000EA6FB9 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B5C7BD2C24252BCA00C70AB5 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B5A1D22D242BD6A000EA6FB9 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5C7BD3024252BF800C70AB5 /* RealmSwift.framework */; };
@@ -75,12 +74,11 @@
 		B50A102924292889009B9C05 /* CDTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDTableViewCell.swift; sourceTree = "<group>"; };
 		B50A102B242928BA009B9C05 /* CDTodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDTodoViewController.swift; sourceTree = "<group>"; };
 		B50A102D242928D1009B9C05 /* CDTodoTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDTodoTaskViewController.swift; sourceTree = "<group>"; };
-		B594DFBC242A7492006047B8 /* ForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewController.swift; sourceTree = "<group>"; };
-		B594DFBE242A7518006047B8 /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
+		B54D79DC242D25F700F64F37 /* WeatherLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherLoader.swift; sourceTree = "<group>"; };
+		B54D79DE242D263800F64F37 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		B594DFC0242A7587006047B8 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		B594DFC2242A76F1006047B8 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = ../SkillBox_12/Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		B594DFC5242A76F5006047B8 /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = ../SkillBox_12/Carthage/Build/iOS/SVProgressHUD.framework; sourceTree = "<group>"; };
-		B594DFC8242A771B006047B8 /* WeatherLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherLoader.swift; sourceTree = "<group>"; };
 		B5BA0DE92423CDDF00789E62 /* Skillbox_14.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Skillbox_14.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5BA0DEC2423CDDF00789E62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5BA0DEE2423CDDF00789E62 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -164,9 +162,8 @@
 				B5BA0DF02423CDDF00789E62 /* ViewController.swift */,
 				B5BA0DF22423CDDF00789E62 /* Main.storyboard */,
 				B594DFC0242A7587006047B8 /* Category.swift */,
-				B594DFC8242A771B006047B8 /* WeatherLoader.swift */,
-				B594DFBE242A7518006047B8 /* WeatherTableViewCell.swift */,
-				B594DFBC242A7492006047B8 /* ForecastViewController.swift */,
+				B54D79DC242D25F700F64F37 /* WeatherLoader.swift */,
+				B54D79DE242D263800F64F37 /* WeatherViewController.swift */,
 				B50A102B242928BA009B9C05 /* CDTodoViewController.swift */,
 				B50A102D242928D1009B9C05 /* CDTodoTaskViewController.swift */,
 				B50A102924292889009B9C05 /* CDTableViewCell.swift */,
@@ -347,17 +344,16 @@
 			files = (
 				B5BA0E282423EB0300789E62 /* TodoTableViewCell.swift in Sources */,
 				B50A102A24292889009B9C05 /* CDTableViewCell.swift in Sources */,
+				B54D79DD242D25F700F64F37 /* WeatherLoader.swift in Sources */,
 				B5BA0E222423DDA800789E62 /* TodoViewController.swift in Sources */,
 				B5BA0DF72423CDDF00789E62 /* Skillbox_14.xcdatamodeld in Sources */,
 				B5BA0DF12423CDDF00789E62 /* ViewController.swift in Sources */,
-				B594DFBD242A7492006047B8 /* ForecastViewController.swift in Sources */,
 				B5BA0E242423DE8D00789E62 /* TodoTaskViewController.swift in Sources */,
-				B594DFC9242A771B006047B8 /* WeatherLoader.swift in Sources */,
 				B5C7BD2A2424CCDB00C70AB5 /* Persistance.swift in Sources */,
 				B50A102E242928D1009B9C05 /* CDTodoTaskViewController.swift in Sources */,
 				B5BA0DED2423CDDF00789E62 /* AppDelegate.swift in Sources */,
 				B5BA0DEF2423CDDF00789E62 /* SceneDelegate.swift in Sources */,
-				B594DFBF242A7518006047B8 /* WeatherTableViewCell.swift in Sources */,
+				B54D79DF242D263800F64F37 /* WeatherViewController.swift in Sources */,
 				B50A102C242928BA009B9C05 /* CDTodoViewController.swift in Sources */,
 				B594DFC1242A7587006047B8 /* Category.swift in Sources */,
 			);

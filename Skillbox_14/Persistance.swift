@@ -13,9 +13,37 @@ class Task: Object {
     @objc dynamic var taskName = ""
 }
 
-class TaskArray: Object {
-    dynamic var taskArray: [ForecastWeatherClass] = []
-}
+//class DBManager {
+//    private var database: Realm
+//    static let sharedInstance = DBManager()
+//
+//    private init() {
+//       database = try! Realm()
+//    }
+//
+//    func getDataFromDB() -> Results<TaskArray> {
+//        let results: Results = database.objects(TaskArray.self)
+//        return results
+//    }
+//
+//    func addData(object: [ForecastWeatherClass]) {
+//        try! database.write { database.add(object, update: Realm.UpdatePolicy(rawValue: 2)!)
+//            print("Added new object")
+//        }
+//    }
+//
+//    func deleteAllFromDatabase() {
+//        try! database.write {
+//            database.deleteAll()
+//        }
+//    }
+//
+//    func deleteFromDb(object: TaskArray) {
+//        try! database.write {
+//            database.delete(object)
+//        }
+//    }
+//}
 
 class Persistance {
     
@@ -34,6 +62,28 @@ class Persistance {
         set { UserDefaults.standard.set(newValue, forKey: kLastNameKey) }
         get { return UserDefaults.standard.string(forKey: kLastNameKey) }
     }
+    
+    private let kHumidity = "Persistance.kHumidity"
+    var humidity: String? {
+        set { UserDefaults.standard.set(newValue, forKey: kHumidity) }
+        get { return UserDefaults.standard.string(forKey: kHumidity) }
+    }
+    private let kTemp = "Persistance.kTemp"
+    var temp: String? {
+        set { UserDefaults.standard.set(newValue, forKey: kTemp) }
+        get { return UserDefaults.standard.string(forKey: kTemp) }
+    }
+    private let kTempMax = "Persistance.kTempMax"
+    var tempMax: String? {
+        set { UserDefaults.standard.set(newValue, forKey: kTempMax) }
+        get { return UserDefaults.standard.string(forKey: kTempMax) }
+    }
+    private let kTempMin = "Persistance.kTempMin"
+    var tempMin: String? {
+        set { UserDefaults.standard.set(newValue, forKey: kTempMin) }
+        get { return UserDefaults.standard.string(forKey: kTempMin) }
+    }
+    
     
     // REALM
     private let realm = try! Realm()
@@ -66,17 +116,5 @@ class Persistance {
         try! realm.write {
             realm.delete(realm.objects(Task.self)[id])
         }
-    }
-    
-    func saveWeatherArray(array: [ForecastWeatherClass]) {
-        let anArray = TaskArray()
-        anArray.taskArray = array
-        try! realm.write {
-            realm.add(anArray)
-        }
-    }
-    
-    func getWeatherArray() -> [ForecastWeatherClass] {
-        return realm.objects(TaskArray.self).first?.taskArray ?? []
     }
 }
