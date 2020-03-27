@@ -11,39 +11,8 @@ import RealmSwift
 
 class Task: Object {
     @objc dynamic var taskName = ""
+    @objc dynamic var taskDone = false
 }
-
-//class DBManager {
-//    private var database: Realm
-//    static let sharedInstance = DBManager()
-//
-//    private init() {
-//       database = try! Realm()
-//    }
-//
-//    func getDataFromDB() -> Results<TaskArray> {
-//        let results: Results = database.objects(TaskArray.self)
-//        return results
-//    }
-//
-//    func addData(object: [ForecastWeatherClass]) {
-//        try! database.write { database.add(object, update: Realm.UpdatePolicy(rawValue: 2)!)
-//            print("Added new object")
-//        }
-//    }
-//
-//    func deleteAllFromDatabase() {
-//        try! database.write {
-//            database.deleteAll()
-//        }
-//    }
-//
-//    func deleteFromDb(object: TaskArray) {
-//        try! database.write {
-//            database.delete(object)
-//        }
-//    }
-//}
 
 class Persistance {
     
@@ -88,11 +57,18 @@ class Persistance {
     // REALM
     private let realm = try! Realm()
     
-    func saveTask(name: String) {
+    func saveTask(name: String, status: Bool) {
         let task = Task()
         task.taskName = name
+        task.taskDone = status
         try! realm.write {
             realm.add(task)
+        }
+    }
+    
+    func changeStatus(id: Int, status: Bool) {
+        try! realm.write {
+            realm.objects(Task.self)[id].taskDone = status
         }
     }
     
@@ -110,6 +86,10 @@ class Persistance {
     
     func getTaskName(id: Int) -> String {
         return realm.objects(Task.self)[id].taskName
+    }
+    
+    func getTaskStatus(id: Int) -> Bool {
+        return realm.objects(Task.self)[id].taskDone
     }
     
     func deleteTask(id: Int) {

@@ -19,7 +19,7 @@ class TodoTaskViewController: UIViewController {
     
     @IBOutlet weak var taskNameTextField: UITextField!
     @IBAction func addTaskNameButton(_ sender: Any) {
-        Persistance.shared.saveTask(name: taskNameTextField.text!)
+        Persistance.shared.saveTask(name: taskNameTextField.text!, status: false)
         delegate?.reloadData()
         print("Task: \(taskNameTextField.text!) is sended!")
         dismiss(animated: true, completion: nil)
